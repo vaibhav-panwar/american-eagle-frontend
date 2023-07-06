@@ -31,7 +31,6 @@ main {
     height: 80px;
     position: relative;
     overflow: hidden;
-
 }
 
 .slide {
@@ -219,3 +218,25 @@ p {
 }
 
 /* footer part */
+footer{
+  border-top: 1px solid gainsboro;
+  margin-top: 20px;
+}
+.footer-part1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+.boxes{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 20px 0px 20px 0px;
+}
+.boxes a{
+    color: black;
+    font-size: 23px;
+}
