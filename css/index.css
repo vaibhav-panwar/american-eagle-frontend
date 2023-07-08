@@ -44,7 +44,7 @@ main {
 }
 
 .slide a,
-p {
+.slide p {
     margin: 0px 10px 0px 10px;
     font-size: 25px;
 }
@@ -239,4 +239,51 @@ footer{
 .boxes a{
     color: black;
     font-size: 23px;
+}
+
+.boxes p {
+    font-size: 23px;
+    margin-right: 10px;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table1 {
+    /* border: 2px solid darkblue; */
+    width: 25%;
+    margin: 0;
+    font-size: 15px;
+    margin: 20px 20px;
+}
+
+.table1 a {
+    text-decoration: none;
+    margin-bottom: 6px;
+    color: #24272a;
+    font-size: 18px;
+}
+
+.table1 a:hover {
+    text-decoration: underline;
+}
+
+.table1 p {
+   margin: 6px 0px 6px 0px;
+    font-size: 18px;
+}
+
+.footer-img {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-img img {
+    margin: 20px 0;
+    margin-left: 40px;
+    border-radius: 20px;
 }
