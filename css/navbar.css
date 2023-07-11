@@ -12,7 +12,6 @@ body {
     top: 0;
     color: white;
     height: 60px;
-    /* position: fixed; */
     width: 100%;
 }
 
@@ -138,15 +137,13 @@ main {
 
 .navBottom {
     border-bottom: 1px solid #dfdddd;
+    border-top: 1px solid azure;
     background-color: white;
     width: 100%;
     margin-top: 10px;
     padding-bottom: 8px;
     display: flex;
     justify-content: center;
-    /* position: fixed; */
-    /* top:200px;
-    z-index: 999; */
 }
 
 .navBottom button {
@@ -346,12 +343,11 @@ footer {
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        
     }
 
     .ddcontent {
         display: none;
-        position: fixed;
-        background-color: #dfdddd;
         width: 100%;
     }
 
