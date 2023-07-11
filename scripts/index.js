@@ -30,3 +30,19 @@ btn2.addEventListener("click", () => {
 })
 
 //slider js ends
+
+//media dropdown
+let dropCheck = false
+let ddcontent = document.querySelector(".ddcontent");
+document.querySelector(".dropButton").addEventListener("click", (e) => {
+    e.preventDefault();
+    if(!dropCheck){
+        ddcontent.style.display = "block";
+        dropCheck = true;
+    }
+    else{
+        ddcontent.style.display = "none";
+        dropCheck = false;
+    }
+   
+})

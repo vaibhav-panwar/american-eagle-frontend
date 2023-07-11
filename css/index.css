@@ -5,9 +5,11 @@
     font-family: "Avenir Next Regular", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+
+
 #big-img-cont-1 {
     background-image: url(https://s7d2.scene7.com/is/image/aeo/20230708-aehp-25-off-purchase-lg?scl=1&amp;qlt=60&amp;fmt=jpeg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     width: 100%;
     height: 120vh;
@@ -32,8 +34,8 @@
     font-size: 60px;
     font-weight: 1000;
     color: white;
-    margin: 0px 0px 0px 100px;
     text-shadow: 10px 10px 2px rgba(49, 87, 148, 1);
+    text-align: center;
 }
 
 .fill-cont>div {
@@ -108,7 +110,7 @@
 
 #big-img-cont-3 {
     background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-cargos-lg?scl=1&amp;qlt=60&amp;fmt=jpeg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     width: 100%;
     height: 120vh;
@@ -145,13 +147,13 @@
 
 #big-img-cont-4 {
     background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-wtops-lg?scl=1&qlt=60&fmt=jpeg);
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    /* background-position: center; */
     width: 100%;
     height: 120vh;
 }
 
-#big-img-cont-4>h1{
+#big-img-cont-4>h1 {
     width: 50%;
     font-size: 60px;
     font-weight: 1000;
@@ -160,13 +162,14 @@
     margin-left: 30px;
 }
 
-#big-img-cont-4>p{
+#big-img-cont-4>p {
     font-size: 20px;
     color: white;
     margin-top: 20px;
     margin-left: 30px;
 }
-#big-img-cont-4>button{
+
+#big-img-cont-4>button {
     margin-top: 20px;
     margin-left: 30px;
     width: 20%;
@@ -177,19 +180,21 @@
     border: none;
     border-radius: 30px;
 }
+
 #big-img-cont-5 {
     background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-mgraphics-lg?scl=1&qlt=60&fmt=jpeg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height:90vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
-#big-img-cont-5>h1{
+#big-img-cont-5>h1 {
     font-size: 60px;
     font-weight: 1000;
     color: white;
@@ -198,13 +203,14 @@
     text-align: left;
 }
 
-#big-img-cont-5>p{
+#big-img-cont-5>p {
     font-size: 20px;
     color: white;
     margin-top: 20px;
     margin-right: 30px;
 }
-#big-img-cont-5>button{
+
+#big-img-cont-5>button {
     margin-top: 10px;
     margin-bottom: 20px;
     margin-right: 30px;
@@ -216,10 +222,143 @@
     border: none;
     border-radius: 30px;
 }
-#big-img-cont-6{
+
+#big-img-cont-6 {
     width: 100%;
-    height: 100vh;
 }
-#big-img-cont-6>img{
+
+#big-img-cont-6>img {
     width: 100%;
+}
+
+@media (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+    #alternatenav {
+        display: block;
+    }
+
+    #big-img-cont-1 {
+        background-image: url(https://s7d2.scene7.com/is/image/aeo/20230708-aehp-25-off-purchase-sm?scl=1&amp;qlt=60&amp;fmt=webp);
+    }
+
+    .empty-cont {
+        display: none;
+    }
+
+    .fill-cont {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fill-cont h1 {
+        font-size: 40px;
+        margin: 0px;
+    }
+
+    .fill-cont>div {
+        margin-top: 20px;
+    }
+
+    .fill-cont>div>button {
+        width: 20%;
+        height: 40px;
+        font-size: 10px;
+        margin: 5px;
+    }
+
+    .usecode {
+        margin-top: 20px;
+    }
+
+    .exclusions {
+        margin-top: 20px;
+    }
+
+    #big-cont-2 {
+        width: 100%;
+        height: 45vh;
+        background-color: rgba(49, 87, 148, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #big-cont-2>h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #big-cont-2>div>button {
+        width: 25%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    #big-img-cont-3 {
+        background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-cargos-sm?defaultImage=20230628-aehp-cargos-sm&amp;scl=1&amp;qlt=60&amp;fmt=webp);
+        height: 50vh;
+    }
+
+    #big-img-cont-3>h1 {
+        font-size: 50px;
+    }
+
+    #big-img-cont-3>div>button {
+        width: 27%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    #big-img-cont-4 {
+        background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-wtops-sm?scl=1&amp;qlt=60&amp;fmt=jpeg);
+        background-size: 100% 100%;
+        height: 60vh;
+    }
+
+    #big-img-cont-4>h1 {
+        font-size: 35px;
+        margin-left: 20px;
+    }
+
+    #big-img-cont-4>p {
+        font-size: 10px;
+        margin-left: 20px;
+    }
+
+    #big-img-cont-4>button {
+        margin-left: 20px;
+        width: 35%;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    #big-img-cont-5 {
+        background-image: url(https://s7d2.scene7.com/is/image/aeo/20230628-aehp-mgraphics-sm?scl=1&amp;qlt=60&amp;fmt=jpeg);
+        height: 50vh;
+    }
+
+    #big-img-cont-5>h1 {
+        font-size: 40px;
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    #big-img-cont-5>p {
+        text-align: left;
+        font-size: 10px;
+        margin-right: 20px;
+    }
+
+    #big-img-cont-5>button {
+        margin-right: 20px;
+        width: 45%;
+        height: 40px;
+        font-size: 12px
+    }
 }

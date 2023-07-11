@@ -2,6 +2,9 @@ body {
     overflow-x: hidden;
 }
 
+#alternatenav {
+    display: none;
+}
 
 /* nav bar starts here */
 /* slider part starts here */
@@ -11,7 +14,6 @@ body {
     height: 60px;
     /* position: fixed; */
     width: 100%;
-    z-index: 9999;
 }
 
 #nav-top a {
@@ -142,7 +144,7 @@ main {
     padding-bottom: 8px;
     display: flex;
     justify-content: center;
-    position: sticky;
+    /* position: fixed; */
     /* top:200px;
     z-index: 999; */
 }
@@ -150,7 +152,6 @@ main {
 .navBottom button {
     background-color: white;
     color: #24272a;
-    ;
     border: none;
     font-size: 13px;
     letter-spacing: 0.8px;
@@ -289,4 +290,118 @@ footer {
     margin: 20px 0;
     margin-left: 40px;
     border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+    #alternatenav {
+        display: block;
+    }
+
+    #alternatenav>h1 {
+        text-align: center;
+        font-weight: 900;
+        background-color: rgb(49, 87, 148, 1);
+        color: white;
+    }
+
+    .alternate-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        width: 100%;
+        height: 5vh;
+    }
+
+    .alternate-search>input {
+        height: 100%;
+        width: 85%;
+        outline: 0px;
+        border: none;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .alternate-search>button {
+        height: 100%;
+        width: 15%;
+        border: none;
+    }
+
+    .alternate-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 5px 0px 5px;
+        height: 5vh;
+    }
+
+    .alternate-menu>a {
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .ddcontent {
+        display: none;
+        position: fixed;
+        background-color: #dfdddd;
+        width: 100%;
+    }
+
+    .ddcontent>a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin: 7px;
+
+    }
+
+    .ddcontent>a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-part1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .boxes {
+        width: 90%;
+        padding: 20px 0px 20px 0px;
+        margin: 10px;
+    }
+
+    .boxes a {
+        color: black;
+        font-size: 15px;
+    }
+
+    .boxes p {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .footer-img {
+        display: none;
+    }
+
+    .table>:nth-child(1) {
+        width: 100%;
+    }
+
+    .table>:nth-child(2) {
+        display: none;
+    }
+
+    .table>:nth-child(3) {
+        display: none;
+    }
 }
