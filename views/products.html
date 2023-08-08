@@ -310,52 +310,40 @@
     <div id="big-cont">
         <div id="filters">
             <h1>Filters</h1>
-            <button class="dropdown-btn">Select Gender <i class="fa fa-plus"></i>
+            <button class="dropdown-btn">Select Gender
             </button>
             <div class="dropdown-container">
                 <input type="radio" class="gender" name="gender" value="male" /><label>Male</label><br>
                 <input type="radio" class="gender" name="gender" value="female" /><label>Female</label><br>
             </div>
 
-            <button class="dropdown-btn">Categories <i class="fa fa-plus"></i>
+            <button class="dropdown-btn">Categories
             </button>
 
             <div class="dropdown-container">
-                <input type="checkbox" class="category" value="jeans" /><label>Jeans</label><br>
-                <input type="checkbox" class="category" value="shirt" /><label>Shirt</label><br>
-                <input type="checkbox" class="category" value="tshirt" /><label>Tshirt</label><br>
-                <input type="checkbox" class="category" value="shorts" /><label>Shorts</label><br>
-                <input type="checkbox" class="category" value="dress" /><label>Dress</label><br>
+                <input type="radio" name="category" class="category" value="jeans" /><label>Jeans</label><br>
+                <input type="radio" name="category" class="category" value="shirt" /><label>Shirt</label><br>
+                <input type="radio" name="category" class="category" value="tshirt" /><label>Tshirt</label><br>
+                <input type="radio" name="category" class="category" value="shorts" /><label>Shorts</label><br>
+                <input type="radio" name="category" class="category" value="dress" /><label>Dress</label><br>
 
             </div>
 
             <!-- <h3>Filter + Sort</h3> -->
 
-            <button class="dropdown-btn">Size <i class="fa fa-plus"></i>
+            <button class="dropdown-btn">Price
             </button>
-
             <div class="dropdown-container">
-                <input type="checkbox" id="size" value="XS" /><label>XS</label><br>
-                <input type="checkbox" id="size" value="S" /><label>S</label><br>
-                <input type="checkbox" id="size" value="M" /><label>M</label><br>
-                <input type="checkbox" id="size" value="L" /><label>L</label><br>
-                <input type="checkbox" id="size" value="XL" /><label>XL</label><br>
+                <input type="radio" name="price" class="price" value=10 /><label>Less Than $10</label><br>
+                <input type="radio" name="price" class="price" value=25 /><label>Less Than $25</label><br>
+                <input type="radio" name="price" class="price" value=50 /><label>Less Than $50</label><br>
+                <input type="radio" name="price" class="price" value=75 /><label>Less Than $75</label><br>
             </div>
-            <button class="dropdown-btn">Price <i class="fa fa-plus"></i>
+            <button class="dropdown-btn">Sort
             </button>
             <div class="dropdown-container">
-                <input type="checkbox" id="price" value=10 /><label>Less Than $10</label><br>
-                <input type="checkbox" id="price" value=25 /><label>Less Than $25</label><br>
-                <input type="checkbox" id="price" value=50 /><label>Less Than $50</label><br>
-                <input type="checkbox" id="price" value=75 /><label>Less Than $75</label><br>
-                <input type="checkbox" id="price" value=75 /><label>Over $75</label><br>
-            </div>
-            <button class="dropdown-btn">Sort <i class="fa fa-plus"></i>
-            </button>
-            <div class="dropdown-container">
-                <input type="radio" id="sort1" name="sort" value="asc" /><label>Price: Low to High</label><br>
-                <input type="radio" id="sort2" name="sort" value="desc" /><label>Price: High to Low</label><br>
-                <input type="radio" id="sort" name="sort" value="new" /><label>Newest</label><br>
+                <input type="radio" class="sort" name="sort" value="asc" /><label>Price: Low to High</label><br>
+                <input type="radio" class="sort" name="sort" value="desc" /><label>Price: High to Low</label><br>
             </div>
         </div>
         <div id="cont">

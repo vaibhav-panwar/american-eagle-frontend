@@ -1,5 +1,7 @@
 var dropdown = document.getElementsByClassName("dropdown-btn");
 let btns = document.getElementById("pagination");
+let filter = {};
+let query = new URLSearchParams(filter);
 // var i;
 
 // var k;
@@ -18,7 +20,7 @@ for (let i = 0; i < dropdown.length; i++) {
 fetchData(1);
 
 function fetchData(pageno) {
-    fetch(`http://localhost:8080/product?limit=9&page=${pageno}`)
+    fetch(`http://localhost:8080/product?${query}&limit=9&page=${pageno}`)
         .then((res) => {
             let totalPost = res.headers.get('x-total-count');
             let totalBtn = Math.ceil(totalPost / 9);
@@ -105,22 +107,41 @@ function createBtn(id) {
     return btn
 }
 
-let filter = {};
+
 let genderInputs = document.querySelectorAll(".gender");
 let categoryInputs = document.querySelectorAll(".category");
+let priceInputs = document.querySelectorAll(".price");
+let sortInputs = document.querySelectorAll(".sort");
+
 // console.log(genderInputs)
 genderInputs.forEach((input) => {
     input.addEventListener("change", () => {
         updateFilters();
-        let query = new URLSearchParams(filter);
-        console.log(query.toString());
+        query = new URLSearchParams(filter);
+        fetchData(1);
     })
 })
 categoryInputs.forEach((input) => {
     input.addEventListener("change", () => {
         updateFilters();
-        let query = new URLSearchParams(filter);
+        query = new URLSearchParams(filter);
+        fetchData(1);
+    })
+})
+priceInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+        updateFilters();
+        query = new URLSearchParams(filter);
+        fetchData(1);
+    })
+
+})
+sortInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+        updateFilters();
+        query = new URLSearchParams(filter);
         console.log(query.toString());
+        fetchData(1);
     })
 })
 function updateFilters() {
@@ -133,15 +154,19 @@ function updateFilters() {
     let categoryInputs = document.querySelectorAll(".category");
     categoryInputs.forEach((input) => {
         if (input.checked) {
-            if (filter.category) {
-                let a = filter.category;
-                let c = `${a} ${input.value}`;
-                filter.category = c;
-            }
-            else {
-                filter.category = input.value;
-            }
+            filter.category = input.value
         }
     })
-    let sizeInputs = document.querySelectorAll("#id");
+    let priceInputs = document.querySelectorAll(".price");
+    priceInputs.forEach((input) => {
+        if (input.checked) {
+            filter.price = input.value;
+        }
+    })
+    let sortInputs = document.querySelectorAll(".sort");
+    sortInputs.forEach((input) => {
+        if (input.checked) {
+            filter.sort = input.value;
+        }
+    })
 }
