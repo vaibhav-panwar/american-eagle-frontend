@@ -1,4 +1,5 @@
 var dropdown = document.getElementsByClassName("dropdown-btn");
+let btns = document.getElementById("pagination");
 // var i;
 
 // var k;
@@ -14,13 +15,18 @@ for (let i = 0; i < dropdown.length; i++) {
     });
 }
 
-fetchData();
+fetchData(1);
 
-function fetchData() {
-    fetch("http://localhost:8080/product")
+function fetchData(pageno) {
+    fetch(`http://localhost:8080/product?limit=9&page=${pageno}`)
         .then((res) => {
-            let totalPost = res.headers.get("x-total-count");
-            console.log(totalPost)
+            let totalPost = res.headers.get('x-total-count');
+            let totalBtn = Math.ceil(totalPost / 9);
+            btns.innerHTML = "";
+            for (let i = 1; i <= totalBtn; i++) {
+                let a = createBtn(i);
+                btns.append(a);
+            }
             return res.json()
         })
         .then((data) => {
@@ -86,11 +92,23 @@ function createCard(title, image1, image2, price, discount, size, id) {
     // console.log(size,id);
     return card
 }
+function createBtn(id) {
+    let btn = document.createElement("button");
+    btn.classList.add("pbtn");
+    btn.setAttribute("data-page-number", id);
+    btn.classList.add("pagination-button");
+    btn.textContent = id
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        fetchData(e.target.dataset.pageNumber)
+    })
+    return btn
+}
 
 let filter = {};
 let genderInputs = document.querySelectorAll(".gender");
 let categoryInputs = document.querySelectorAll(".category");
-console.log(genderInputs)
+// console.log(genderInputs)
 genderInputs.forEach((input) => {
     input.addEventListener("change", () => {
         updateFilters();

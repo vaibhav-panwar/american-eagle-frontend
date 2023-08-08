@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Avenir Next Regular", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 /* sidebar css */
 #filters>h3 {
   margin-top: 10px;
@@ -66,25 +67,28 @@ label {
 }
 
 /* products css */
-#big-cont{
+#big-cont {
   display: flex;
   width: 100%;
 }
-#filters{
+
+#filters {
   width: 20%;
 }
-#cont{
+
+#cont {
   width: 80%;
 }
-#products{
+
+#products {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
 }
 
-.card-img{
+.card-img {
   width: 100%;
   height: 60vh;
   background-size: 100% 100%;
@@ -94,7 +98,7 @@ label {
 
 
 
-.card-img:hover .atoc{
+.card-img:hover .atoc {
   display: block;
 }
 
@@ -102,12 +106,12 @@ label {
   display: block;
 }
 
-.heart:hover{
+.heart:hover {
   cursor: pointer;
   color: red;
 }
 
-.atoc{
+.atoc {
   width: 80%;
   height: 40px;
   font-size: 15px;
@@ -118,7 +122,7 @@ label {
   display: none;
 }
 
-.heart{
+.heart {
   position: relative;
   top: -90%;
   right: -88%;
@@ -130,27 +134,105 @@ label {
   display: none;
 }
 
-.atoc:hover{
+.atoc:hover {
   cursor: pointer;
 }
 
-.pTitle{
+.pTitle {
   color: rgb(48, 48, 219);
   margin-top: 10px;
   font-weight: 550;
   margin-left: 2px;
 }
 
-.pPrice{
+.pPrice {
   margin-top: 5px;
   margin-left: 2px;
   color: red;
-  font-weight:550;
+  font-weight: 550;
 }
-.pDisc{
+
+.pDisc {
   margin-left: 30px;
   color: black;
   font-size: 80%;
   text-decoration: line-through;
   font-style: italic;
+}
+
+#pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pbtn{
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  background-color: #24272a;
+  color: white;
+  border-radius: 50%;
+}
+.pbtn:hover{
+  cursor: pointer;
+  width: 40px;
+    height: 40px;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+@media (max-width: 992px) {
+  #filters>h1{
+    font-size: 20px;
+  }
+  #filters>h3 {
+    margin-top: 10px;
+  }
+
+  .dropdown-btn {
+    /* padding: 6px 8px 6px 16px; */
+    font-size: 13px;
+    width: 100px;
+
+  }
+
+  .side-bar a:hover,
+  .dropdown-btn:hover {
+    color: #000000;
+  }
+
+  .active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+
+  .fa-plus {
+    float: right;
+    padding-right: 3px;
+  }
+
+  /* products css */
+ 
+
+  #filters {
+    width: 0%;
+
+    display: none;
+  }
+
+  #cont {
+    width: 100%;
+  }
+
+  #products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
 }
